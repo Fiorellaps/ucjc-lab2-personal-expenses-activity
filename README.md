@@ -6,6 +6,8 @@ Programación Avanzada y Entornos de Desarrollo para la IA · Tema 2
 
 Análisis de un conjunto de datos de gastos personales de 10 000 personas: revisarás su calidad, lo limpiarás, buscarás patrones, lo prepararás para entrenar un modelo y presentarás los resultados en un dashboard con Shiny. Pondrás en práctica lo visto en el Tema 2: calidad y limpieza de datos, transformación de variables, análisis exploratorio, visualización y preparación para modelado.
 
+Los datos proceden del conjunto [Personal Expense Data](https://www.kaggle.com/datasets/sanjay3454chauhan/personal-expense-data) de Kaggle.
+
 ## Qué vas a practicar
 
 | Paso | Contenido |
@@ -23,8 +25,7 @@ Análisis de un conjunto de datos de gastos personales de 10 000 personas: revis
 | Archivo | Contenido |
 |---|---|
 | `src/lab2_gastos_personales.ipynb` | Notebook que tienes que completar |
-| `data/raw/personal_spending_dataset.csv` | Datos del laboratorio |
-| `requirements.txt` | Librerías usadas en la solución, con las versiones probadas |
+| `data/raw/personal_spending_dataset.csv` | Datos del laboratorio ([fuente en Kaggle](https://www.kaggle.com/datasets/sanjay3454chauhan/personal-expense-data)) |
 | `Laboratorio2_enunciado.docx` | Enunciado de la actividad |
 
 ## Cómo empezar
@@ -32,13 +33,13 @@ Análisis de un conjunto de datos de gastos personales de 10 000 personas: revis
 ```bash
 python -m venv .venv
 source .venv/bin/activate        # en Windows: .venv\Scripts\activate
-pip install -r requirements.txt jupyterlab
+pip install pandas matplotlib seaborn scikit-learn shiny jupyterlab
 jupyter lab src/lab2_gastos_personales.ipynb
 ```
 
-## Dashboard de ejemplo
+## Propuesta de dashboard
 
-`src/app_shiny.py` es un dashboard de Shiny for Python que lee `data/processed/gastos_limpio.csv`, generado al ejecutar el notebook resuelto. Tiene filtros por ocupación, zona y edad, y permite excluir las filas con problemas de calidad.
+Como paso final, te proponemos presentar los resultados en un dashboard con Shiny for Python, por ejemplo `src/app_shiny.py`, que lea los datos limpios de `data/processed/`. Puede incluir filtros (ocupación, zona, edad, exclusión de filas con problemas de calidad), algunos indicadores, gráficos de la salud financiera y una tabla resumen por grupo.
 
 ```bash
 shiny run src/app_shiny.py       # abre http://127.0.0.1:8000

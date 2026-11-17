@@ -1,0 +1,16 @@
+# Entorno y cachés
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+
+# Material del profesorado (no se publica)
+src/lab2_gastos_personales-solved.ipynb
+src/app_shiny.py
+Laboratorio2_enunciado.docx
+~$*.docx
+requirements.txt
+
+# Datos: solo se publican los originales de data/raw
+archive.zip
+data/processed/
