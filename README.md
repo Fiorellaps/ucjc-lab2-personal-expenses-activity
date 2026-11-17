@@ -22,9 +22,9 @@ Análisis de un conjunto de datos de gastos personales de 10 000 personas: revis
 
 | Archivo | Contenido |
 |---|---|
-| `lab2_gastos_personales.ipynb` | Notebook que tienes que completar |
+| `src/lab2_gastos_personales.ipynb` | Notebook que tienes que completar |
+| `data/raw/personal_spending_dataset.csv` | Datos del laboratorio |
 | `requirements.txt` | Librerías usadas en la solución, con las versiones probadas |
-| `personal_spending_dataset.csv` | Datos del laboratorio (también comprimidos en `archive.zip`) |
 | `Laboratorio2_enunciado.docx` | Enunciado de la actividad |
 
 ## Cómo empezar
@@ -33,13 +33,13 @@ Análisis de un conjunto de datos de gastos personales de 10 000 personas: revis
 python -m venv .venv
 source .venv/bin/activate        # en Windows: .venv\Scripts\activate
 pip install -r requirements.txt jupyterlab
-jupyter lab lab2_gastos_personales.ipynb
+jupyter lab src/lab2_gastos_personales.ipynb
 ```
 
 ## Dashboard de ejemplo
 
-`app_shiny.py` es un dashboard de Shiny for Python que lee `data/processed/gastos_limpio.csv`, generado al ejecutar el notebook resuelto. Tiene filtros por ocupación, zona y edad, y permite excluir las filas con problemas de calidad.
+`src/app_shiny.py` es un dashboard de Shiny for Python que lee `data/processed/gastos_limpio.csv`, generado al ejecutar el notebook resuelto. Tiene filtros por ocupación, zona y edad, y permite excluir las filas con problemas de calidad.
 
 ```bash
-shiny run app_shiny.py           # abre http://127.0.0.1:8000
+shiny run src/app_shiny.py       # abre http://127.0.0.1:8000
 ```
